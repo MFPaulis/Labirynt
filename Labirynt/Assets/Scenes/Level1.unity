@@ -27263,7 +27263,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 2.7905521
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -27407,7 +27407,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0a380459d1519e644965cbe9eeb3de0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8b6a63ca574afe41952f9d5fe248b9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -27426,8 +27426,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239194286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.54, y: 1.8, z: -1.6681767}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -11.15, y: 15.75, z: -1.6681767}
+  m_LocalScale: {x: 0.88715, y: 0.88715, z: 0.88715}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -28184,7 +28184,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 29849088257fe2447b44db683dd45acb, type: 2}
+  - {fileID: 2100000, guid: c297b96d8db78594891399fffb9ffe88, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
