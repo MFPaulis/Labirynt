@@ -7,12 +7,18 @@ public class LevelControl : MonoBehaviour
 {
     public int index;
     public string LevelName;
+    public GameObject manager;
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
-            other.transform.position = new Vector3(0, 0, 0);
-            SceneManager.LoadScene(index);
+            Debug.Log("Hello player");
+            if(manager.GetComponent<CollectingItems>().IfAllCollected())
+            {
+                other.transform.position = new Vector3(0, 0, 0);
+                SceneManager.LoadScene(index);
+            }
         }
     }
 }
+
