@@ -1,24 +1,48 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelControl : MonoBehaviour
 {
-    public int index;
-    public string LevelName;
-    public GameObject manager;
+    public int nextLevelIndex;
+    public bool isOpen = false;
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        Debug.Log("Collision detected!");
+        if(isOpen)
         {
-            Debug.Log("Hello player");
-            if(manager.GetComponent<CollectingItems>().IfAllCollected())
+            if (other.CompareTag("Player"))
             {
-                other.transform.position = new Vector3(0, 0, 0);
-                SceneManager.LoadScene(index);
+                ChangeScene();
             }
         }
+        
+    }
+
+    public void Open()
+    {
+        animator.SetBool("isOpen", true);
+        isOpen = true;
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene(nextLevelIndex);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
+
 
