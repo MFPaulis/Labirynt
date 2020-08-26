@@ -122,6 +122,15 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
+  - first: {x: 5, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 14
+      m_TileSpriteIndex: 23
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 12
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
   - first: {x: -2, y: 2, z: 0}
     second:
       serializedVersion: 2
@@ -206,8 +215,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 759e652cde16b4e42a3c46128c3fff4a, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 7d82020bf89198347ac1a84af5ab866e, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 964e94a5025897344a867f6053809875, type: 2}
   - m_RefCount: 1
@@ -292,7 +301,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -658149218449747138, guid: 87ed79293e0cfe147af0e7c151d10251,
       type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 7550331590511245030, guid: a214e698bfa37f5439686ee12e943939,
       type: 3}
   - m_RefCount: 1
@@ -310,7 +319,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: e27313bc9b8621a4e95ffd8fb31429cd, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 15
+  - m_RefCount: 16
     m_Data:
       e00: 1
       e01: 0
@@ -353,13 +362,13 @@ Tilemap:
     m_Data: {r: -5.3136597, g: -5.3136597, b: -5.3136597, a: -5.3136597}
   - m_RefCount: 0
     m_Data: {r: -6.342819, g: -6.342819, b: -6.342819, a: -6.342819}
-  - m_RefCount: 0
-    m_Data: {r: 5.712967, g: 5.712967, b: 5.712967, a: 5.712967}
+  - m_RefCount: 1
+    m_Data: {r: 0.56433487, g: 1, b: 0.4009434, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -4, y: -5, z: 0}
-  m_Size: {x: 9, y: 10, z: 1}
+  m_Size: {x: 10, y: 10, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:

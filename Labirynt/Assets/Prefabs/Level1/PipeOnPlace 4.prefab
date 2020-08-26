@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7364249116627581066}
   - component: {fileID: -2773681608121506024}
   m_Layer: 0
-  m_Name: PipeOnPlace 2
+  m_Name: PipeOnPlace 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,10 +70,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 3
   m_Sprite: {fileID: 3275028520990625885, guid: 1aae68d05fcf561498f7b2599c9b5559,
     type: 3}
-  m_Color: {r: 0.26274508, g: 0.3807675, b: 0.8862745, a: 1}
+  m_Color: {r: 1, g: 0.9171872, b: 0.18396229, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

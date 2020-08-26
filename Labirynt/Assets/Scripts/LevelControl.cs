@@ -17,7 +17,6 @@ public class LevelControl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Collision detected!");
         if(isOpen)
         {
             if (other.CompareTag("Player"))

@@ -20,7 +20,6 @@ public class PickUp : MonoBehaviour
         {
             if(inventory.isFull[i]==false)
             {
-                Debug.Log("slot " + i + " was free");
                 inventory.isFull[i] = true;
                 GameObject newInventoryItem = Instantiate(itemButton, inventory.slots[i].transform, false);
                 newInventoryItem.GetComponent<PutMeSomewhere>().SetId(i);
