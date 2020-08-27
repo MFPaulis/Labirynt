@@ -311,6 +311,7 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 6127771767909264714}
   animator: {fileID: 6127771767909264712}
+  torch: {fileID: 0}
 --- !u!95 &6127771767909264712
 Animator:
   serializedVersion: 3
