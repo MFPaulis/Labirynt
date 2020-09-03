@@ -9,7 +9,7 @@ public class Pipe : MonoBehaviour
     void Start()
     {
         puzzle = GameObject.Find("PipesPuzzle");
-        puzzle.GetComponent<PipesPuzzle>().addPipe();
+        puzzle.GetComponent<PipesPuzzle>().AddPipe();
     }
 
 }

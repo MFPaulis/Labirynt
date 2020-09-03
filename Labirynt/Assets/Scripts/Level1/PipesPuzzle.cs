@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PipesPuzzle : MonoBehaviour
 {
-    [SerializeField] GameObject plant;
     public int requiredNumber;
     int currentNumber=0;
 
@@ -17,14 +16,18 @@ public class PipesPuzzle : MonoBehaviour
         {
           if(currentNumber == requiredNumber)
             {
-                plant.GetComponent<Plant>().ShowKey();
                 solved = true;
             }
         }
     }
 
-    public void addPipe()
+    public void AddPipe()
     {
         currentNumber++;
+    }
+
+    public bool IsSolved()
+    {
+        return solved;
     }
 }
