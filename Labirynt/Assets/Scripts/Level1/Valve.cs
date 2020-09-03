@@ -14,15 +14,11 @@ public class Valve : MonoBehaviour
         puzzle = pipesPuzzle.GetComponent<PipesPuzzle>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     void OnMouseDown()
     {
-        if(puzzle.IsSolved())
+        Debug.Log("...");
+        if (puzzle.IsSolved())
         {
             //animacja
             plant.GetComponent<Plant>().ShowKey();
