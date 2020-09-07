@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: stone
+  m_Name: red pipe
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 75361e2c2236b144ba8df1f78d4e28ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9080bef0a7658b444a6b77fd8d209109, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
