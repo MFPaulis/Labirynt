@@ -8,10 +8,13 @@ public class Valve : MonoBehaviour
     [SerializeField] GameObject pipesPuzzle;
     PipesPuzzle puzzle;
 
+    PlayerText playerText;
+
     // Start is called before the first frame update
     void Start()
     {
         puzzle = pipesPuzzle.GetComponent<PipesPuzzle>();
+        playerText = GameObject.Find("PlayerText").GetComponent<PlayerText>() ;
     }
 
 
@@ -25,7 +28,7 @@ public class Valve : MonoBehaviour
         } else
         {
             //"nic sie nie dzieje"
-            Debug.Log("nic sie nie dzieje");
+            playerText.AddMessage("Nothing happened");
         }
     }
 
