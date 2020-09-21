@@ -23,7 +23,6 @@ public class MachineButton : MonoBehaviour
 
     void OnMouseDown()
     { 
-        Debug.Log("klik");
         machine.ReleaseButtons(color, number);
         spriteRenderer.sprite = pressedSprite;
         pressed = true;

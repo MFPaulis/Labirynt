@@ -7,6 +7,7 @@ public class Valve : MonoBehaviour
     [SerializeField] GameObject plant;
     [SerializeField] GameObject pipesPuzzle;
     PipesPuzzle puzzle;
+    bool plantWatered;
 
     PlayerText playerText;
 
@@ -14,20 +15,24 @@ public class Valve : MonoBehaviour
     void Start()
     {
         puzzle = pipesPuzzle.GetComponent<PipesPuzzle>();
-        playerText = GameObject.Find("PlayerText").GetComponent<PlayerText>() ;
+        playerText = GameObject.Find("PlayerText").GetComponent<PlayerText>();
+        plantWatered = false;
     }
 
 
     void OnMouseDown()
     {
-        Debug.Log("...");
         if (puzzle.IsSolved())
         {
-            //animacja
-            plant.GetComponent<Plant>().ShowKey();
+            if(!plantWatered)
+            {
+                //animacja
+                plant.GetComponent<Plant>().ShowKey();
+                plantWatered = true;
+            }
+            
         } else
         {
-            //"nic sie nie dzieje"
             playerText.AddMessage("Nothing happened");
         }
     }
