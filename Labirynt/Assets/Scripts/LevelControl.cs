@@ -9,6 +9,7 @@ public class LevelControl : MonoBehaviour
     public int nextLevelIndex;
     public bool isOpen = false;
     private Animator animator;
+    private bool playerCollision = false;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class LevelControl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        playerCollision = true;
         if(isOpen)
         {
             if (other.CompareTag("Player"))
@@ -24,13 +26,27 @@ public class LevelControl : MonoBehaviour
                 ChangeScene();
             }
         }
-        
     }
 
-    public void Open()
+    void OnCollisionExit(Collision other)
+    {
+        if (other.collider.CompareTag("Player")) playerCollision = false;
+    }
+
+    private IEnumerator WaitForOpening()
+    {
+        do
+        {
+            yield return null;
+        } while (!animator.GetCurrentAnimatorStateInfo(0).IsName("Door_Open"));
+    }
+
+    public IEnumerator Open()
     {
         animator.SetBool("isOpen", true);
+        yield return WaitForOpening();
         isOpen = true;
+        if (playerCollision) ChangeScene();
     }
 
     public void ChangeScene()

@@ -34,7 +34,7 @@ public class PlayerText : MonoBehaviour
                 for (int i = 0; i < message.Length; i++)
                 {
                     textMeshPro.text += message[i];
-                    yield return new WaitForSeconds(0.2f);
+                    yield return new WaitForSeconds(0.1f);
                 }
                 yield return new WaitForSeconds(1.75f);
                 textMeshPro.text = "";

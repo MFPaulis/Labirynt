@@ -23,7 +23,11 @@ public class MachineButton : MonoBehaviour
 
     void OnMouseDown()
     { 
-        machine.ReleaseButtons(color, number);
+        machine.ChangeButtons(color, number);
+    }
+
+    public void PressButton()
+    {
         spriteRenderer.sprite = pressedSprite;
         pressed = true;
     }
@@ -32,5 +36,10 @@ public class MachineButton : MonoBehaviour
     {
         pressed = false;
         spriteRenderer.sprite = releasedSprite;
+    }
+
+    public bool isPressed()
+    {
+        return pressed;
     }
 }

@@ -9,6 +9,6 @@ public class KeyOnPlaceScript : MonoBehaviour
     void Start()
     {
         door = GameObject.Find("Door");
-        door.GetComponent<LevelControl>().Open();
+        StartCoroutine(door.GetComponent<LevelControl>().Open());
     }
 }
