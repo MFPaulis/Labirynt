@@ -6,14 +6,17 @@ public class Valve : MonoBehaviour
 {
     [SerializeField] GameObject plant;
     [SerializeField] GameObject pipesPuzzle;
+    [SerializeField] GameObject drops;
     PipesPuzzle puzzle;
     bool plantWatered;
-
     PlayerText playerText;
+    private Animator anim;
+    bool clicked_once = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        anim = gameObject.GetComponent<Animator>();
         puzzle = pipesPuzzle.GetComponent<PipesPuzzle>();
         playerText = GameObject.Find("PlayerText").GetComponent<PlayerText>();
         plantWatered = false;
@@ -22,18 +25,21 @@ public class Valve : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (puzzle.IsSolved())
+       if (puzzle.IsSolved())
         {
             if(!plantWatered)
             {
-                //animacja
+                anim.SetBool("clicked_solved", true);
+                drops.GetComponent<Animator>().SetBool("water", true);
                 plant.GetComponent<Plant>().ShowKey();
                 plantWatered = true;
             }
             
-        } else
+        } else if(!clicked_once)
         {
             playerText.AddMessage("Nothing happened");
+            clicked_once = true;
+            anim.SetBool("clicked_once", true);
         }
     }
 
